@@ -24,7 +24,7 @@ from utils import *
 
 parser = argparse.ArgumentParser(description = 'Pytorch VGG on PET-CT image')
 #path of dataset
-parser.add_argument('--dataset',default = '/mnt/HDD1/Frederic/ite_sparse_classification/CriteriaCompare/',type = str,help = 'path of dataset')
+parser.add_argument('--dataset',default = '',type = str,help = 'path of dataset')
 #configuration 
 parser.add_argument('--epochs',default = 300,type=int,help='epochs for each sparse model to run')
 parser.add_argument('--start_epoch', default=0, type=int, metavar='N',
@@ -98,8 +98,6 @@ def main():
         for ite in range(args.sparse_epoch):
             best_acc = 0
             start_epoch = 0
-            #sparse_model_path: /mnt/HDD1/Frederic/ensemble_baseline/pruned_checkpoint/0.4-vgg16-epoch...
-            #result_path: /mnt/HDD1/Frederic/ensemble_baseline/pruned_checkpoint/0.4-vgg16-epoch.../sparse_ite_0
             sparse_model_path = '{}ByRelevance/{}-{}-epoch{}'.format(args.dataset,
                                                                     args.arch,args.sparse_ratio,args.epochs)
             result_path = '{}ByRelevance/{}-{}-epoch{}/sparse_ite_{}'.format(args.dataset,
@@ -461,7 +459,7 @@ def load_data(path):
 }
 
     data_dir = path
-    # testData_dir = '/mnt/HDD1/Frederic/ensemble_baseline/TestImage/'
+
 
     image_datasets = {
             x : datasets.ImageFolder(os.path.join(data_dir,x),

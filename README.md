@@ -30,12 +30,6 @@ Compare impact from feature representations during training; Red curve - directl
 # Result on Imageclef2016 measured by accuracy based on three models
 |     Trainining method  | Vgg-16 | ResNet-50 | DenseNet-121 |
 |:--------------:|:----------------:|:----------------:|:----------------:|
-77.3
-85.2
-86.1
-86.3
-87.4
-
 | Train from scratch|  79.3    | 79.5   | 77.3    |
 | Finetuning |  84.5    | 85.2 | 85.2    |
 | Ensemble |  85.1    | 85.7   | 86.1    |

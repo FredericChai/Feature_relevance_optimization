@@ -9,9 +9,11 @@ This repo implement a optimization method that use the similarity distance and f
 
 ## Dataset
 We download dataset from following link: 
-[imageclef](https://www.imageclef.org/2016)
-[isic](https://www.isic-archive.com/#!/topWithHeader/wideContentTop/main)
-[TNSCUI](https://tn-scui2020.grand-challenge.org/Dataset/)
+1. [imageclef](https://www.imageclef.org/2016)
+
+2. [isic](https://www.isic-archive.com/#!/topWithHeader/wideContentTop/main)
+
+3. [TNSCUI](https://tn-scui2020.grand-challenge.org/Dataset/)
 
 ## Quick start
 Please easily run the RunAll.py file or use example in recipes to have a quick start.
